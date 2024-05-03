@@ -67,6 +67,12 @@ body {
     background-color: #53E9AA;
 }
 
+.card-back img {
+  width: 100%; /* La largeur du GIF sera égale à celle de la carte */
+  height: 100%; /* La hauteur du GIF sera égale à celle de la carte */
+  object-fit: cover; /* Le GIF s'ajustera pour couvrir toute la carte */
+}
+
 /* Buttons */
 button {
   margin-top: 50px;
