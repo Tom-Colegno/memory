@@ -77,3 +77,9 @@ body {
 button {
   margin-top: 50px;
 }
+
+.game-title {
+  font-size: 32px;
+  padding: 3px;
+  text-align: center;
+}
