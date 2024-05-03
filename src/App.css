@@ -1,3 +1,7 @@
+@font-face {
+  font-family: 'Xylarion';
+  src: url('/src/assets/font/XylarionBold.ttf');
+}
 /* Body */
 body {
   background-color: #282c34;
@@ -13,6 +17,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding-bottom: 15%;
 }
 
 /* Memory Game */
@@ -33,7 +38,7 @@ body {
 .card-inner {
   width: 100%;
   height: 100%;
-  position: relative;
+
   transform-style: preserve-3d;
   transition: transform 0.6s;
 }
@@ -47,7 +52,7 @@ body {
 .card-back {
     width: 100%;
     height: 100%;
-    position: absolute;
+  position: absolute;
     backface-visibility: hidden;
 }
 
@@ -75,11 +80,34 @@ body {
 
 /* Buttons */
 button {
-  margin-top: 50px;
+  margin-top: 25px;
 }
 
-.game-title {
-  font-size: 32px;
-  padding: 3px;
+/* Basic Styling */
+.game-title{
+  display: flex;
+  justify-content: center;
+  font-size: 50px;
   text-align: center;
+  align-items: center;
+  font: normal bold  / 1 '';
+  background-color: black;
+  padding-top: 15px;
 }
+.game-title{
+  background-image: url(https://scitechdaily.com/images/White-Dwarf-Star-With-Planet.jpg);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-family: Xylarion;
+  font-size: 80px;
+  animation: animatedText 10s infinite alternate-reverse;
+}
+
+@keyframes animatedText{
+  from{
+    background-position: 18%;
+  }
+  to{
+    background-position: 85%;
+  }}

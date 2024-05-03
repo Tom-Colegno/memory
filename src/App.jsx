@@ -5,7 +5,7 @@ import Title from './components/Title/Title';
 
 function App() {
   return (<>
-    <Title text="Jeu de Mémoire" />
+    <Title text="MEMORY GAME" />
     <Card />
   </>);
 }

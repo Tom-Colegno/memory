@@ -4,24 +4,24 @@ import Button from '../Button/Button';
 function Card() {
     // Définition des données des cartes avec les URL des images à afficher
     const cardsData = [
-        { id: 1, value: 'public/assets/images/leo1.png' },
-        { id: 2, value: 'public/assets/images/leo2.png' },
-        { id: 3, value: 'public/assets/images/leo3.png' },
-        { id: 4, value: 'public/assets/images/leo4.png' },
-        { id: 5, value: 'public/assets/images/leo5.png' },
-        { id: 6, value: 'public/assets/images/leo6.png' },
-        { id: 7, value: 'public/assets/images/leo7.png' },
-        { id: 8, value: 'public/assets/images/leo8.png' },
-        { id: 9, value: 'public/assets/images/leo9.png' },
-        { id: 10, value: 'public/assets/images/leo10.png'},
-        { id: 11, value: 'public/assets/images/leo11.png' },
-        { id: 12, value: 'public/assets/images/leo12.png' },
-        { id: 13, value: 'public/assets/images/leo13.png'},
-        { id: 14, value: 'public/assets/images/leo14.png' },
-        { id: 15, value: 'public/assets/images/leo15.png' },
-        { id: 16, value: 'public/assets/images/leo16.png'},
-        { id: 17, value: 'public/assets/images/leo17.png' },
-        { id: 18, value: 'public/assets/images/leo18.png'},
+        { id: 1, value: '/src/assets/images/leo1.png' },
+        { id: 2, value: '/src/assets/images/leo2.png' },
+        { id: 4, value: '/src/assets/images/leo4.png' },
+        { id: 5, value: '/src/assets/images/leo5.png' },
+        { id: 6, value: '/src/assets/images/leo6.png' },
+        { id: 3, value: '/src/assets/images/leo3.png' },
+        { id: 7, value: '/src/assets/images/leo7.png' },
+        { id: 8, value: '/src/assets/images/leo8.png' },
+        { id: 9, value: '/src/assets/images/leo9.png' },
+        { id: 10, value: '/src/assets/images/leo10.png'},
+        { id: 11, value: '/src/assets/images/leo11.png' },
+        { id: 12, value: '/src/assets/images/leo12.png' },
+        { id: 13, value: '/src/assets/images/leo13.png'},
+        { id: 14, value: '/src/assets/images/leo14.png' },
+        { id: 15, value: '/src/assets/images/leo15.png' },
+        { id: 16, value: '/src/assets/images/leo16.png'},
+        { id: 17, value: '/src/assets/images/leo17.png' },
+        { id: 18, value: '/src/assets/images/leo18.png'},
     ];
 
     // Dupliquez et mélangez les cartes
@@ -81,26 +81,30 @@ function Card() {
             {gameWon ? (
                 <div>Félicitations ! Vous avez gagné !</div>
             ) : (
-                <div className="memory-game">
-                    {cards.map((card, index) => (
-                        <div
-                            key={index}
-                            className={`card ${matches.includes(index) || index === firstCard || index === secondCard ? 'flipped' : ''}`}
-                            onClick={() => handleCardClick(index)}
-                        >
-                            <div className="card-inner">
-                                <div className="card-front">
-                                    {/* Affichage de l'image sur la face avant de la carte */}
-                                    <img src={card.value} alt="Image de carte" />
-                                </div>
-                                <div className="card-back">
-                                    {/* Insertion d'un GIF */}
-                                    <img src="public/assets/images/metaverse.gif" alt="GIF" />
-                                </div>
-                            </div>
-                        </div>
-                    ))}
+<div className="memory-game">
+    {cards.map((card, index) => (
+        <div
+            key={index}
+            className={`card ${matches.includes(index) || index === firstCard || index === secondCard ? 'flipped' : ''}`}
+            onClick={() => handleCardClick(index)}
+        >
+            {/* Conteneur de la carte */}
+            <div className="card-inner">
+                {/* Face avant de la carte */}
+                <div className="card-front">
+                    {/* Affichage de l'image sur la face avant de la carte */}
+                    <img src={card.value} alt="Image de carte" />
                 </div>
+                {/* Face arrière de la carte */}
+                <div className="card-back">
+                    {/* Affichage du GIF sur la face arrière de la carte */}
+                    <img src="/src/assets/images/metaverse2.gif" alt="GIF" />
+                </div>
+            </div>
+        </div>
+    ))}
+</div>
+
             )}
             <Button onClick={resetGame} className="reset-button" text="Nouvelle partie" />
         </div>
