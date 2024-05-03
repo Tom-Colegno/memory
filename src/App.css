@@ -18,7 +18,7 @@ body {
 /* Memory Game */
 .memory-game {
   display: grid;
-  grid-template-columns: repeat(4, 100px);
+  grid-template-columns: repeat(6, 100px);
   grid-gap: 10px;
 }
 
@@ -57,6 +57,17 @@ body {
     align-items: center;
 }
 
+.card-front img {
+  width: 100%;  /* L'image prendra toute la largeur de la carte */
+  height: 100%; /* L'image prendra toute la hauteur de la carte */
+  object-fit: cover; /* L'image s'ajustera pour couvrir la carte */
+}
+
 .card-back {
     background-color: #53E9AA;
+}
+
+/* Buttons */
+button {
+  margin-top: 50px;
 }
