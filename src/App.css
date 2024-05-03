@@ -5,10 +5,10 @@
 /* Body */
 body {
   background-image: url('/src/assets/images/background.png');
-  background-color: #282c34; /* Couleur de fond de secours */
-  background-size: cover; /* Ajuste l'image pour couvrir complètement l'élément */
-  background-repeat: no-repeat; /* Pas de répétition de l'image */
-  background-position: center; /* Centre l'image */
+  background-color: #282c34;
+  background-size: cover;
+  background-repeat: no-repeat; 
+  background-position: center; 
   display: flex;
   justify-content: center;
   align-items: center;
