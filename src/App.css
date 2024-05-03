@@ -4,13 +4,18 @@
 }
 /* Body */
 body {
-  background-color: #282c34;
+  background-image: url('/src/assets/images/background.png');
+  background-color: #282c34; /* Couleur de fond de secours */
+  background-size: cover; /* Ajuste l'image pour couvrir complètement l'élément */
+  background-repeat: no-repeat; /* Pas de répétition de l'image */
+  background-position: center; /* Centre l'image */
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100vh;
   margin: 0;
 }
+
 
 /* Memory Game Container */
 .memory-game-container {
@@ -66,10 +71,6 @@ body {
   width: 100%;  /* L'image prendra toute la largeur de la carte */
   height: 100%; /* L'image prendra toute la hauteur de la carte */
   object-fit: cover; /* L'image s'ajustera pour couvrir la carte */
-}
-
-.card-back {
-    background-color: #53E9AA;
 }
 
 .card-back img {
