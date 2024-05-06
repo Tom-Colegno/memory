@@ -4,16 +4,16 @@
 }
 /* Body */
 body {
-  background-image: url('/src/assets/images/background.png');
+  background-image: url('/src/assets/images/background.gif');
   background-color: #282c34;
   background-size: cover;
-  background-repeat: no-repeat; 
   background-position: center; 
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100vh;
   margin: 0;
+  overflow: hidden;
 }
 
 
@@ -40,24 +40,27 @@ body {
   cursor: pointer;
 }
 
+body, .card {
+  cursor: url('/src/assets/images/mouse.png'), auto;
+}
+
 .card-inner {
   width: 100%;
   height: 100%;
-
   transform-style: preserve-3d;
-  transition: transform 0.6s;
+  transition: transform 0.2s;
 }
 
 .card.flipped .card-inner {
-  transform: rotateY(180deg);
-  color: azure;
+  transform: rotateY(360deg);
+  /*backface-visibility: visible;*/
 }
 
 .card-front,
 .card-back {
     width: 100%;
     height: 100%;
-  position: absolute;
+    position: absolute;
     backface-visibility: hidden;
 }
 
@@ -96,6 +99,35 @@ button {
   padding-top: 15px;
 }
 .game-title{
+  background-image: url(https://scitechdaily.com/images/White-Dwarf-Star-With-Planet.jpg);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-family: Xylarion;
+  font-size: 80px;
+  animation: animatedText 10s infinite alternate-reverse;
+}
+
+@keyframes animatedText{
+  from{
+    background-position: 18%;
+  }
+  to{
+    background-position: 85%;
+  }}
+
+.win{
+  display: flex;
+  justify-content: center;
+  font-size: 50px;
+  text-align: center;
+  align-items: center;
+  font: normal bold  / 1 '';
+  background-color: black;
+  padding-top: 15px;
+}
+
+.win{
   background-image: url(https://scitechdaily.com/images/White-Dwarf-Star-With-Planet.jpg);
   -webkit-background-clip: text;
   background-clip: text;
