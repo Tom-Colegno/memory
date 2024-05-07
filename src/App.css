@@ -99,7 +99,7 @@ button {
   padding-top: 15px;
 }
 .game-title{
-  background-image: url(https://scitechdaily.com/images/White-Dwarf-Star-With-Planet.jpg);
+  background-image: url(/src/assets/images/galaxy.png);
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -128,7 +128,7 @@ button {
 }
 
 .win{
-  background-image: url(https://scitechdaily.com/images/White-Dwarf-Star-With-Planet.jpg);
+  background-image: url(/src/assets/images/galaxy.png);
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
