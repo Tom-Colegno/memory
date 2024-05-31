@@ -103,7 +103,7 @@ function Card() {
                                     <img src={card.value} alt="Image de carte" />
                                 </div>
                                 <div className="card-back" style={{ display: selectedCards[index] || matches.includes(index) ? 'none' : 'block' }}>
-                                    <img src="/src/assets/images/metaverse.gif" alt="GIF" />
+                                    <img src="/src/assets/images/metaverse2.gif" alt="GIF" />
                                 </div>
                             </div>
                         </div>
